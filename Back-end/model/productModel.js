@@ -10,7 +10,7 @@ const productSchema= mongoose.Schema({
         required:true
     },
     tags:{
-        type:String,
+        type:[String],
         required:true
     },
 
@@ -28,7 +28,8 @@ const productSchema= mongoose.Schema({
     },
     images:{
         type:[String],
-        required:true
+        required:true,
+        default:[]
     },
     email:{
         type:String,

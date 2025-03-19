@@ -5,23 +5,29 @@ import {BrowserRouter,Routes,Route} from "react-router-dom"
 import './App.css'
 import Login from './pages/login'
 import Home from './pages/Home'
-import Navbar from './pages/Navbar'
-import Createproudct from './components/Createproudct'
-import SellerProcutPage from './pages/SellerProductPage'
-
+import Createproduct from './components/Createproduct'
+import SellerProduct from "./pages/Sellerproduct"
+import NavBar from "./pages/Navbar"
+import IndividualProduct from './pages/IndividualProduct'
+import Cart from './pages/cart'
+import Profile from './pages/profile'
+import CreateAddress  from './components/CreateAddress'
 function App() {
   
 
   return (
     <>
       <BrowserRouter>
-        <Navbar/>
+        <NavBar/>
        <Routes>
             <Route  path="/"  element={<Home/>}/>
             <Route path="/login" element={<Login/>}/>
-            <Route path="/create" element={<Createproudct/>}></Route>
-            <Route path="/" element={<Createproudct/>}></Route>
-            <Route path="/modify" element={<SellerProcutPage/>}></Route>
+            <Route path="/create" element={<Createproduct/>}></Route>
+            <Route path="/modify" element={<SellerProduct/>}></Route>
+            <Route path="/pro" element={<IndividualProduct/>}></Route>
+            <Route path="/cart" element={<Cart/>}></Route>
+            <Route path="/profile" element={<Profile/>}></Route>
+
        </Routes>
      </BrowserRouter>
 
