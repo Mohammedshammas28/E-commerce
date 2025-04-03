@@ -5,11 +5,11 @@ const addressSchema=mongoose.Schema({
         type:String,
         required:true
     },
-    state:{
+    city:{
         type:String,
         required:true
     },
-    distrit:{
+    address:{
         type:String,
         required:true
 
@@ -19,6 +19,9 @@ const addressSchema=mongoose.Schema({
         required:true
     },
     area:{
+        type:String
+    },
+    addressType:{
         type:String
     }
 
@@ -59,14 +62,15 @@ const userSchema =mongoose.Schema({
         default:"user",
         enum:["user","seller","admin"]
     },
-    address:{
-        type:addressSchema
-    },
+    address:[{type:addressSchema}],
     isActivated:{
         type:Boolean,
         default:false
     },
     cart: [cartSchema],
+    profilePhoto:{
+        type:String
+    }
 
 })
 
